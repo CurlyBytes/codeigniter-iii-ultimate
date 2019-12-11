@@ -1,5 +1,7 @@
 # Contribution guidelines
-
+<!--
+Todo: review the contributing document for better understanding
+-->
 First of all, thanks for thinking of contributing to this project. :smile:
 
 Before sending a Pull Request, please make sure that you're assigned the task on a GitHub issue.
@@ -13,26 +15,14 @@ Please proceed with a Pull Request only after you're assigned. It'd be sad if yo
 
 1. Install with
 
-    ```sh
-    git clone https://github.com/athityakumar/colorls
-    cd colorls
-    gem install bundler
-    bundle install
-    ```
+
 
 2. Make your changes in a different git branch (say, `add-new-flag`). These changes can be
 
     - adding better icons to [YAML files](lib/yaml/)
     - adding more flag options to the ruby gem.
 
-3. (Optional) To test whether `colorls` executable is working properly, do
-    ```sh
-    rake install
-    ```
-    Then install the gem file in the folder `pkg`. After that to use the new binary,
-    ```sh
-    colorls # start using colorls
-    ```
+3. (Optional) To test whether
 
 4. (Required for YAML file changes) These are the specifications for the YAML files -
 
