@@ -1,0 +1,12 @@
+{
+    "name": "cocoytech/codeigniter-iii-ultimate",
+    "description": "All best practices and setup for codeigniter 3 all thru the tutorials and webs",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Francisco Abayon",
+            "email": "francisco.abayon@rafi.ph"
+        }
+    ],
+    "require": {}
+}
