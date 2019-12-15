@@ -101,7 +101,7 @@ switch (ENVIRONMENT)
  * This variable must contain the name of your "system" directory.
  * Set the path if it is not in the same directory as this file.
  */
-	$system_path = '../../system';
+	$system_path = '../../vendor/codeigniter/framework/system';
 
 /*
  *---------------------------------------------------------------
@@ -228,13 +228,7 @@ switch (ENVIRONMENT)
  *  Now that we know the path, set the main path constants
  * -------------------------------------------------------------------
  */
-	// Updated the PHPUnit testing of codeigniter 3 framework by following kenjis CI3 change log
-	// on how to use properly the vendor setup and please note the folder of 'application' to 'app'
-	// Todo: headlines to be check each time when updating folder or project path
-	define('CI_PHPUNIT_TESTPATH', implode(
-		DIRECTORY_SEPARATOR,
-		[dirname(APPPATH), 'vendor', 'kenjis', 'ci-phpunit-test', 'application','app', 'tests', '_ci_phpunit_test']
-	).DIRECTORY_SEPARATOR);
+
 
 	// The name of THIS file
 	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
@@ -283,6 +277,14 @@ switch (ENVIRONMENT)
 	}
 
 	define('APPPATH', $application_folder.DIRECTORY_SEPARATOR);
+
+	// Updated the PHPUnit testing of codeigniter 3 framework by following kenjis CI3 change log
+	// on how to use properly the vendor setup and please note the folder of 'application' to 'app'
+	// Todo: headlines to be check each time when updating folder or project path
+	define('CI_PHPUNIT_TESTPATH', implode(
+		DIRECTORY_SEPARATOR,
+		[dirname(APPPATH), 'vendor', 'kenjis', 'ci-phpunit-test', 'application', 'tests', '_ci_phpunit_test']
+	).DIRECTORY_SEPARATOR);
 
 	// The path to the "views" directory
 	if ( ! isset($view_folder[0]) && is_dir(APPPATH.'views'.DIRECTORY_SEPARATOR))
@@ -378,7 +380,7 @@ define('TESTPATH', APPPATH.'tests'.DIRECTORY_SEPARATOR);
 
 // updated by following the readme of kenjis CI3 phpunit
 //require __DIR__ . '/_ci_phpunit_test/CIPHPUnitTest.php';
-require CI_PHPUNIT_TESTPATH . '/CIPHPUnitTest.php';
+require CI_PHPUNIT_TESTPATH . 'CIPHPUnitTest.php';
 
 CIPHPUnitTest::init();
 // Or you can set directories for autoloading

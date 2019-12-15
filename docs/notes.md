@@ -13,3 +13,10 @@ php vendor/kenjis/ci-phpunit-test/install.php --from-composer //https://github.c
 composer dump-autoload
 php composer.phar status
 php composer.phar self-update
+
+
+---
+To install phpunit
+- https://phpunit.de/getting-started-with-phpunit.html
+- to resolve issue in phpunit to run in CI3  https://stackoverflow.com/questions/43188374/update-phpunit-xampp
+-
