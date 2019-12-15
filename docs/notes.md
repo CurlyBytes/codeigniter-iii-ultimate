@@ -7,7 +7,7 @@ php composer.phar validate --with-dependencies //before you tag a release. It wi
 
 for CI3 phpunit best setup use the following:
 composer require kenjis/ci-phpunit-test --dev
-php vendor/kenjis/ci-phpunit-test/install.php --from-composer
+php vendor/kenjis/ci-phpunit-test/install.php --from-composer //https://github.com/kenjis/ci-phpunit-test
 
 
 composer dump-autoload
