@@ -5,6 +5,11 @@ composer create-project kenjis/codeigniter-composer-installer --no-dev --remove-
 
 php composer.phar validate --with-dependencies //before you tag a release. It will check if your composer.json is valid: Also validate the composer.json of all installed dependencies.
 
+for CI3 phpunit best setup use the following:
+composer require kenjis/ci-phpunit-test --dev
+php vendor/kenjis/ci-phpunit-test/install.php --from-composer
 
+
+composer dump-autoload
 php composer.phar status
 php composer.phar self-update
