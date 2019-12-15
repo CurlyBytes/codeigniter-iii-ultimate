@@ -32,3 +32,7 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 
 ## Composer project
 /vendor/
+
+
+## Phpunit test for CI3
+application/tests/build/*

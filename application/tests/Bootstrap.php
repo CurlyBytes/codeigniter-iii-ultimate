@@ -1,4 +1,5 @@
 <?php
+// Todo: Check unit test bootstrap settings and customize the setup
 /**
  * CodeIgniter
  *
