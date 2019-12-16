@@ -101,7 +101,7 @@ Todo: Add motivation and example from wikis of the development like blogs and ar
 
 ``` bash
 $ cd /path/to/codeigniter/
-$ cd application/tests/
+$ cd bin/
 $ phpunit
 ```
 *Output example*

@@ -35,4 +35,4 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 
 
 ## Phpunit test for CI3
-application/tests/build/*
+bin/build/*
