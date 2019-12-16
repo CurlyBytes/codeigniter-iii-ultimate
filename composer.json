@@ -4,10 +4,14 @@
     "type": "project",
     "license": "MIT",
     "homepage": "codeigniter3.cocoytech.com",
+    "readme": "README.md",
+    "time": "2019-12-01",
     "authors": [
         {
             "name": "Francisco Abayon",
-            "email": "francisco.abayon@rafi.ph"
+            "email": "francisco.abayon@rafi.ph",
+            "homepage": "https://cocoytech.com/",
+            "role": "Developer"
         }
     ],
     "require": {
