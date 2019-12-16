@@ -4,18 +4,18 @@
 	colors="true">
 	<testsuites>
 		<testsuite name="CodeIgniter Application Test Suite">
-			<directory suffix="test.php">./</directory>
-			<exclude>./_ci_phpunit_test/</exclude>
+			<directory suffix="test.php">../application/tests</directory>
+
 		</testsuite>
 	</testsuites>
 	<filter>
 		<whitelist>
-			<directory suffix=".php">../application/controllers</directory>
-			<directory suffix=".php">../application/models</directory>
-			<directory suffix=".php">../application/views</directory>
-			<directory suffix=".php">../application/libraries</directory>
-			<directory suffix=".php">../application/helpers</directory>
-			<directory suffix=".php">../application/hooks</directory>
+			<directory suffix=".php">../application/tests/controllers</directory>
+			<directory suffix=".php">../application/tests/models</directory>
+			<directory suffix=".php">../application/tests/views</directory>
+			<directory suffix=".php">../application/tests/libraries</directory>
+			<directory suffix=".php">../application/tests/helpers</directory>
+			<directory suffix=".php">../application/tests/hooks</directory>
 		</whitelist>
 	</filter>
 	<logging>

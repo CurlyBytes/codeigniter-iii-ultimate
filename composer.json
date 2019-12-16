@@ -3,14 +3,14 @@
     "description": "All best practices and setup for codeigniter 3 all thru the tutorials and webs",
     "type": "project",
     "license": "MIT",
-    "homepage": "codeigniter3.cocoytech.com",
+    "homepage": "https://codeigniter3.cocoytech.com",
     "readme": "README.md",
     "time": "2019-12-01",
     "authors": [
         {
             "name": "Francisco Abayon",
             "email": "francisco.abayon@rafi.ph",
-            "homepage": "https://cocoytech.com/",
+            "homepage": "https://cocoytech.com",
             "role": "Developer"
         }
     ],
@@ -21,13 +21,12 @@
         "wiki": "https://github.com/cocoytech/codeigniter-iii-ultimate/docs",
         "irc": "irc://irc.freenode.org/composer",
         "source": "https://github.com/cocoytech/codeigniter-iii-ultimate",
-        "docs": "https://github.com/cocoytech/codeigniter-iii-ultimate/docs",
-        "rss": "#",
-        "chat": "#"
+        "docs": "https://github.com/cocoytech/codeigniter-iii-ultimate/docs"
+
     },
     "require": {
 		"php": ">=5.3.2",
-		"codeigniter/framework": "3.1.*"
+		"codeigniter/framework": "^3.1.0"
 	},
     "require-dev": {
         "kenjis/ci-phpunit-test": "^0.17.0",
