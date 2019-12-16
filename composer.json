@@ -3,6 +3,7 @@
     "description": "All best practices and setup for codeigniter 3 all thru the tutorials and webs",
     "type": "project",
     "license": "MIT",
+    "homepage": "codeigniter3.cocoytech.com",
     "authors": [
         {
             "name": "Francisco Abayon",
