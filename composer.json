@@ -30,7 +30,7 @@
 	},
     "require-dev": {
         "kenjis/ci-phpunit-test": "^0.17.0",
-        "phpunit/phpunit": "^8",
+        "phpunit/phpunit": "^7",
         "roave/security-advisories": "dev-master"
     },
     "autoload": {

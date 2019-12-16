@@ -36,3 +36,5 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 
 ## Phpunit test for CI3
 bin/build/*
+bin/xdebug-filter.php
+.phpunit.result.cache

@@ -1,0 +1,52 @@
+<phpunit
+	bootstrap="./application/tests/Bootstrap.php"
+	backupGlobals="true"
+	cacheTokens ="true"
+	convertDeprecationsToExceptions="true"
+	convertErrorsToExceptions="true"
+	convertNoticesToExceptions ="true"
+	convertWarningsToExceptions ="true"
+
+	beStrictAboutOutputDuringTests ="true"
+	beStrictAboutResourceUsageDuringSmallTests ="true"
+
+
+	colors="true">
+	<?ignore
+
+		?>
+	<testsuites>
+		<testsuite name="unit">
+			<directory phpVersion="4.0.0" phpVersionOperator=">=" suffix="test.php">./application/tests</directory>
+
+		</testsuite>
+	</testsuites>
+	<filter>
+		<whitelist>
+			<directory suffix=".php">./application/tests/controllers</directory>
+			<directory suffix=".php">./application/tests/models</directory>
+			<directory suffix=".php">./application/tests/views</directory>
+			<directory suffix=".php">./application/tests/libraries</directory>
+			<directory suffix=".php">./application/tests/helpers</directory>
+			<directory suffix=".php">./application/tests/hooks</directory>
+		</whitelist>
+	</filter>
+	<logging>
+
+		<log type="coverage-html" target="bin/build/coverage"/>
+		<log type="coverage-crap4j" target="bin/build/lophpgs/crap4j.xml"/>
+		<log type="coverage-text" target="bin/build/logs/text.txt"/>
+		<log type="coverage-php" target="bin/build/logs/test.php"/>
+		<log type="coverage-clover" target="bin/build/logs/clover.xml"/>
+		<log type="junit" target="bin/build/logs/junit.xml"/>
+		<log type="testdox-html" target="bin/build/coverage/testdox.html"/>
+  		<log type="testdox-text" target="bin/build/logs/testdox.txt"/>
+	</logging>
+	<php>
+		<ini name="foo" value="bar"/> <!-- this is ini_set('foo', 'bar'); -->
+		<const name="foo" value="bar"/><!--this is define('foo', 'bar'); -->
+		<env name="foo" value="bar" force="true"/><!--this is $_ENV['foo'] = 'bar'; -->
+		<cookie name="foo" value="bar"/><!--this is $_COOKIE['foo'] = 'bar'; -->
+		<server name="foo" value="bar"/><!--this is $_SERVER['foo'] = 'bar'; -->
+	</php>
+</phpunit>

@@ -99,21 +99,46 @@ Todo: Add motivation and example from wikis of the development like blogs and ar
 [(Back to top)](#table-of-contents)
 
 ### Running Tests
-
+the first phpunit is to create the xdebug file for generating faster report
 ``` bash
 $ cd /path/to/codeigniter/
 $ cd bin/
-$ phpunit
+$ phpunit --dump-xdebug-filter ../../bin/xdebug-filter.php
 ```
 *Output example*
 ```
-Time: 341 ms, Memory: 5.50Mb
+$ phpunit --dump-xdebug-filter ../../bin/xdebug-filter.php
+PHPUnit 7.5.18 by Sebastian Bergmann and contributors.
+
+Wrote Xdebug filter script to ../../bin/xdebug-filter.php
+```
+
+``` bash
+$ phpunit --prepend bin/xdebug-filter.php  --verbose --testdox
+```
+*Output example*
+```
+PHPUnit 7.5.18 by Sebastian Bergmann and contributors.
+
+Runtime:       PHP 7.3.3 with Xdebug 2.8.1
+Configuration: C:\xampp\htdocs\codeigniter-iii-ultimate\phpunit.xml
+
+Welcome_test
+ ✔ Index [149.21 ms]
+ ✔ Method 404 [105.63 ms]
+ ✔ A p p p a t h [43.57 ms]
+
+Time: 1.25 seconds, Memory: 12.00 MB
 
 OK (3 tests, 3 assertions)
 
 Generating code coverage report in Clover XML format ... done
 
+Generating Crap4J report XML file ... done
+
 Generating code coverage report in HTML format ... done
+
+Generating code coverage report in PHP format ... done
 ```
 
 [(Back to top)](#table-of-contents)
