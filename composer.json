@@ -1,6 +1,7 @@
 {
     "name": "cocoytech/codeigniter-iii-ultimate",
     "description": "All best practices and setup for codeigniter 3 all thru the tutorials and webs",
+    "type": "project",
     "license": "MIT",
     "authors": [
         {
