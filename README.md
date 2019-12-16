@@ -7,8 +7,10 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 <!--
-Todo: Add project badges here
+Todos: Add project badges here
+todos: test
 -->
+[![Build Status](https://dev.azure.com/rafi-secdevops/Codeigniter%203%20Ultimate/_apis/build/status/cocoytech.codeigniter-iii-ultimate?branchName=master)](https://dev.azure.com/rafi-secdevops/Codeigniter%203%20Ultimate/_build/latest?definitionId=18&branchName=master)
 
 <!-- PROJECT LOGO -->
 <br />
@@ -20,9 +22,9 @@ Todo: Add project badges here
   <h3 align="center">CodeIgniter 3 Ultimate</h3>
 
   <p align="center">
-   The aim of this project is to get the best practices and setup for startup project using CI3. Combine the library creation, blogs and articles related to CodeIgniter 3.
+          The aim of this project is to get the best practices and setup for startup project using CI3. Combine the library creation, blogs and articles related to CodeIgniter 3.
     <br />
-    <a href="https://github.com/cocoytech/codeigniter-iii-ultimate/docs"><strong>Explore the docs »</strong></a>
+   <a href="https://github.com/cocoytech/codeigniter-iii-ultimate/docs"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="#">View Demo </a><b><i>(soon)</i></b> <!-- https://ci3ultimate.cocoytech.com/ -->
@@ -35,7 +37,7 @@ Todo: Add project badges here
 
 
 <!-- TABLE OF CONTENTS -->
-## Table of Contents
+### Table of Contents
 * [Features](#features)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
@@ -78,7 +80,6 @@ Todo: Add link to the products need in the things to be install
 * Docker Setup (Optional)
 * Linux or macOS or Windows
 * Bash for Windows (`git bash` should suffice)
-
 
 ### Installing
 
