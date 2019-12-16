@@ -98,9 +98,23 @@ Todo: Add motivation and example from wikis of the development like blogs and ar
 [(Back to top)](#table-of-contents)
 
 ### Running Tests
-<!--
-Todo: Check the all test from Vulnerable test, Load test, Unit test, integration test and UI Test
--->
+
+``` bash
+$ cd /path/to/codeigniter/
+$ cd bin/
+$ phpunit
+```
+*Output example*
+```
+Time: 341 ms, Memory: 5.50Mb
+
+OK (3 tests, 3 assertions)
+
+Generating code coverage report in Clover XML format ... done
+
+Generating code coverage report in HTML format ... done
+```
+
 [(Back to top)](#table-of-contents)
 
 ### Building
