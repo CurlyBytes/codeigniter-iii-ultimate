@@ -25,8 +25,11 @@ steps:
 - script: composer install --no-interaction --prefer-dist
   displayName: 'composer install'
 
-- script: phpunit
-  displayName: 'Run tests with phpunit'
+- script: phpunit --dump-xdebug-filter ../../bin/xdebug-filter.php
+  displayName: 'Add XDebug for faster code analysis'
+
+- script: phpunit --prepend bin/xdebug-filter.php  --verbose --testdox
+  displayName: 'Run tests with phpunit and generate the code analysis'
 
 - task: ArchiveFiles@2
   inputs:
