@@ -19,7 +19,7 @@ php composer.phar self-update
 To install phpunit
 - https://phpunit.de/getting-started-with-phpunit.html
 - to resolve issue in phpunit to run in CI3  https://stackoverflow.com/questions/43188374/update-phpunit-xampp
--
+- composer filename php -s localhost:2004
 
 
 --- Future check
