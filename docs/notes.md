@@ -14,14 +14,16 @@ composer dump-autoload
 php composer.phar status
 php composer.phar self-update
 
-
+--
+search position it job works
+-- if else statement in CI ( azure yaml or travis CI)
 ---
 To install phpunit
 - https://phpunit.de/getting-started-with-phpunit.html
 - to resolve issue in phpunit to run in CI3  https://stackoverflow.com/questions/43188374/update-phpunit-xampp
 - composer filename php -s localhost:2004
 - review the phpunit setup and the comment tags for proper execution
-https://phpunit.readthedocs.io/en/8.5/textui.html   
+https://phpunit.readthedocs.io/en/8.5/textui.html
 - add markdown magics tips and tricks https://github.com/davidwells/markdown-magic
 
 --- Future check

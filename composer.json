@@ -25,16 +25,58 @@
 
     },
     "scripts": {
+        "pre-install-cmd": [
+            "@composer check-valid-composer"
+        ],
+        "post-install-cmd": [
+            "@composer phpcs-fix"
+        ],
+        "post-update-cmd": [
+
+        ],
+        "check-composer-commands": [
+            "@composer --verbose --profile"
+        ],
+        "check-composer-dependency": [
+            "@composer show -i",
+            "@composer show -t"
+        ],
+        "phpcs-fix": [
+            "./vendor/bin/phpcs --standard=PSR2 application/ --report=code",
+            "./vendor/bin/phpcbf application/"
+        ],
+        "check-valid-composer": [
+            "@composer validate --no-check-all --ansi"
+        ],
+        "install-production": [
+            "@composer install --no-dev --optimize-autoloader --apcu-autoloader"
+        ],
+        "update-package": [
+            "@composer update drupal/core --with-dependencies --lock"
+        ],
+        "security-check": [
+            "@composer update --dry-run roave/security-advisories",
+            "@composer update --dry-run --profile --verbose"
+        ],
         "test": [
-            "phpunit"
+            "./vendor/bin/phpunit --dump-xdebug-filter ../../application/bin/xdebug-filter.php",
+            "./vendor/bin/phpunit --prepend ../../application/bin/xdebug-filter.php  --verbose --testdox"
+        ],
+        "clear": [
+            "@composer dump-autoload --optimize --classmap-authoritative",
+            "@nuke"
         ],
         "nuke": [
             "rm -rf vendor composer.lock",
             "@composer clearcache",
-            "@composer install"
+            "@composer install --optimize-autoloader"
         ] ,
         "lowest": "validate-prefer-lowest -m",
         "lowest-setup": "composer update --prefer-lowest --prefer-stable --prefer-dist --no-interaction && cp composer.json composer.backup && composer require --dev dereuromark/composer-prefer-lowest && mv composer.backup composer.json"
+    },
+    "scripts-descriptions": {
+        "clear": "Checks that the application code conforms to coding standard",
+        "test": "Launches the preconfigured PHPUnit"
     },
     "require": {
         "php": "7.1.* || 7.2.*",
@@ -52,7 +94,7 @@
         "dereuromark/composer-prefer-lowest": "^0.1.4",
         "kenjis/ci-phpunit-test": "0.17.0",
         "nerones/codeigniter-phpcs": "dev-master",
-        "phpunit/phpunit": "7",
+        "phpunit/phpunit": "^7",
         "roave/security-advisories": "dev-master"
     },
     "autoload": {
@@ -69,7 +111,13 @@
         },
         "sort-packages": true,
         "secure-http": true,
-        "htaccess-protect" : true,
-        "optimize-autoloader": true
+        "htaccess-protect" : true
+    },
+    "suggest": {
+        "kenjis/codeigniter-cli": "A command-line tool for CodeIgniter 3.0",
+        "kenjis/ci-phpunit-test": "An easier way to use PHPUnit with CodeIgniter 3.0",
+        "kenjis/codeigniter-ss-twig": "A Simple and Secure Twig integration for CodeIgniter 3.0",
+        "kenjis/codeigniter-doctrine": "A simple Doctrine integration for CodeIgniter 3.0",
+        "kenjis/codeigniter-deployer": "A Deployment Tool for CodeIgniter 3.0"
     }
 }
