@@ -1,0 +1,2 @@
+## Dont merge the composerlock manually
+/composer.lock -merge

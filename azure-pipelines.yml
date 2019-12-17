@@ -22,7 +22,7 @@ steps:
     php -version
   displayName: 'Use PHP version $(phpVersion)'
 
-- script: composer install --no-interaction --prefer-dist
+- script: composer install --no-dev --no-interaction --prefer-dist
   displayName: 'composer install'
 
 - script: phpunit --dump-xdebug-filter ../../bin/xdebug-filter.php
