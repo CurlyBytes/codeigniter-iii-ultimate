@@ -15,6 +15,22 @@ php composer.phar status
 php composer.phar self-update
 
 --
+ show                   Shows information about packages.
+  status                 Shows a list of locally modified packages, for packages installed from source.
+  suggests               Shows package suggestions.
+  test                   Launches the preconfigured PHPUnit
+  update-package         Runs the update-package script as defined in composer.json.
+  upgrade                Upgrades your dependencies to the latest version according to composer.json, and updates the composer.lock file.
+  validate               Validates a composer.json and composer.lock.
+  why                    Shows which packages cause the given package to be installed.
+  why-not                Shows which packages prevent the given package from being installed.
+  run-script             Runs the scripts defined in composer.json.
+  search                 Searches for packages.
+  self-update            Updates composer.phar to the latest version.
+  selfupdate             Updates composer.phar to the latest version.
+    about                  Shows the short information about Composer.
+  archive                Creates an archive of this composer package.
+
 search position it job works
 -- if else statement in CI ( azure yaml or travis CI)
 ---

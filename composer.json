@@ -35,7 +35,7 @@
 
         ],
         "check-composer-commands": [
-            "@composer --verbose --profile"
+            "@composer -vvv --profile"
         ],
         "check-composer-dependency": [
             "@composer show -i",
@@ -56,11 +56,11 @@
         ],
         "security-check": [
             "@composer update --dry-run roave/security-advisories",
-            "@composer update --dry-run --profile --verbose"
+            "@composer update --dry-run --profile -vvv"
         ],
         "test": [
             "./vendor/bin/phpunit --dump-xdebug-filter ../../application/bin/xdebug-filter.php",
-            "./vendor/bin/phpunit --prepend ../../application/bin/xdebug-filter.php  --verbose --testdox"
+            "./vendor/bin/phpunit --prepend ../../application/bin/xdebug-filter.php  -vvv --testdox"
         ],
         "clear": [
             "@composer dump-autoload --optimize --classmap-authoritative",
@@ -80,6 +80,9 @@
     },
     "require": {
         "php": "7.1.* || 7.2.*",
+        "ext-tokenizer": "*",
+        "ext-xmlwriter": "*",
+        "ext-simplexml": "*",
         "ext-mbstring": "*",
         "ext-pdo_mysql": "*",
         "codeigniter/framework": "^3.1.0",
