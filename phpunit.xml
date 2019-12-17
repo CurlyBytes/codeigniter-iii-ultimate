@@ -1,4 +1,6 @@
 <phpunit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="phpunit.xsd"
 	bootstrap="./application/tests/Bootstrap.php"
 	backupGlobals="true"
 	cacheTokens ="true"
@@ -10,7 +12,7 @@
 	beStrictAboutOutputDuringTests ="true"
 	beStrictAboutResourceUsageDuringSmallTests ="true"
 
-
+	verbose="true"
 	colors="true">
 	<?ignore
 
