@@ -41,7 +41,9 @@ To install phpunit
 - review the phpunit setup and the comment tags for proper execution
 https://phpunit.readthedocs.io/en/8.5/textui.html
 - add markdown magics tips and tricks https://github.com/davidwells/markdown-magic
-
+- add unit test, integration test, load test , api test and ui test
+- fix the suggest scripts in the composer
+- refactor composer to compliant to all os(linux, windows and mac)
 --- Future check
 must check doctrine implementation
 https://github.com/FriendsOfPHP/security-advisories/tree/master/codeigniter/framework

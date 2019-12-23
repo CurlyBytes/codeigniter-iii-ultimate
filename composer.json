@@ -26,72 +26,78 @@
     },
     "scripts": {
         "pre-install-cmd": [
-            "@composer check-valid-composer"
+            "@composer check-isvalid"
         ],
         "post-install-cmd": [
-            "@composer phpcs-fix"
+
+            "@composer check-security",
+            "@composer check-phpcs"
+        ],
+        "pre-update-cmd": [
+            "@composer check-isvalid"
         ],
         "post-update-cmd": [
-
+            "@composer check-security",
+            "@composer check-phpcs"
         ],
-        "check-composer-commands": [
-            "@composer -vvv --profile"
-        ],
-        "check-composer-dependency": [
-            "@composer show -i",
-            "@composer show -t"
-        ],
-        "phpcs-fix": [
-            "./vendor/bin/phpcs --standard=PSR2 application/ --report=code",
-            "./vendor/bin/phpcbf application/"
-        ],
-        "check-valid-composer": [
+        "check-isvalid": [
             "@composer validate --no-check-all --ansi"
         ],
-        "install-production": [
-            "@composer install --no-dev --optimize-autoloader --apcu-autoloader"
+        "check-phpcs": [
+            "vendor\\bin\\phpcs --standard=PSR2 application/"
         ],
-        "update-package": [
-            "@composer update drupal/core --with-dependencies --lock"
+        "check-profile": [
+            "@composer show -i",
+            "@composer show -t",
+            "@composer -vvv --profile"
         ],
-        "security-check": [
+        "check-security": [
             "@composer update --dry-run roave/security-advisories",
             "@composer update --dry-run --profile -vvv"
         ],
-        "test": [
-            "./vendor/bin/phpunit --dump-xdebug-filter ../../application/bin/xdebug-filter.php",
-            "./vendor/bin/phpunit --prepend ../../application/bin/xdebug-filter.php  -vvv --testdox"
+        "check-test": [
+            "vendor\\bin\\phpunit --dump-xdebug-filter ../../bin/xdebug-filter.php",
+            "vendor\\bin\\phpunit --prepend bin/xdebug-filter.php -vvv --testdox"
         ],
-        "clear": [
+        "fix-cache": [
             "@composer dump-autoload --optimize --classmap-authoritative",
-            "@nuke"
-        ],
-        "nuke": [
             "rm -rf vendor composer.lock",
-            "@composer clearcache",
-            "@composer install --optimize-autoloader"
-        ] ,
-        "lowest": "validate-prefer-lowest -m",
-        "lowest-setup": "composer update --prefer-lowest --prefer-stable --prefer-dist --no-interaction && cp composer.json composer.backup && composer require --dev dereuromark/composer-prefer-lowest && mv composer.backup composer.json"
+            "@composer clearcache"
+        ],
+        "fix-invalid": [
+            "vendor\\bin\\phpcbf application/"
+        ],
+        "install-lowest": "validate-prefer-lowest -m",
+        "install-lowest-setup": "composer update --prefer-lowest --prefer-stable --prefer-dist --no-interaction && cp composer.json composer.backup && composer require --dev dereuromark/composer-prefer-lowest && mv composer.backup composer.json",
+        "install-production": [
+            "@composer install --no-dev --optimize-autoloader --apcu-autoloader"
+        ],
+
+        "update-package": [
+            "@composer update drupal/core --with-dependencies --lock"
+        ]
+
     },
     "scripts-descriptions": {
-        "clear": "Checks that the application code conforms to coding standard",
-        "test": "Launches the preconfigured PHPUnit"
+        "check-isvalid": "Checks the composer.json will build and validate.",
+        "check-phpcs": "Checks if the application practice follows the standard setup and guidelines.",
+        "check-profile": "Checks the composer library and its corresponding info with the dependencies.",
+        "check-security": "Checks the library dependency if there is outdate with security risk.",
+        "check-test": "Checks the composer.json will build and validate.",
+        "fix-cache": "Nuke the composer current setup and reset everything.",
+        "fix-invalid": "Runs the phpcbf to autofix some error code from application standard setup.",
+        "install-lowest": "Runs to validate the lowest depenency library if its compatible.",
+        "install-lowest-setup": "Install the MVP to its corresponding library and dependencies to avoid version conflict.",
+        "install-production": "Install the standard setup with code efficiently."
     },
     "require": {
         "php": "7.1.* || 7.2.*",
-        "ext-tokenizer": "*",
-        "ext-xmlwriter": "*",
-        "ext-simplexml": "*",
-        "ext-mbstring": "*",
-        "ext-pdo_mysql": "*",
         "codeigniter/framework": "^3.1.0",
         "cweagans/composer-patches": "^1.6",
         "hirak/prestissimo": "^0.3.9"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.3",
-        "phpcompatibility/php-compatibility": "^8.2",
         "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
         "phpmd/phpmd": "^2.6",
         "dereuromark/composer-prefer-lowest": "^0.1.4",
@@ -118,7 +124,6 @@
     },
     "suggest": {
         "kenjis/codeigniter-cli": "A command-line tool for CodeIgniter 3.0",
-        "kenjis/ci-phpunit-test": "An easier way to use PHPUnit with CodeIgniter 3.0",
         "kenjis/codeigniter-ss-twig": "A Simple and Secure Twig integration for CodeIgniter 3.0",
         "kenjis/codeigniter-doctrine": "A simple Doctrine integration for CodeIgniter 3.0",
         "kenjis/codeigniter-deployer": "A Deployment Tool for CodeIgniter 3.0"
