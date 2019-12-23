@@ -30,15 +30,13 @@
         ],
         "post-install-cmd": [
 
-            "@composer check-security",
-            "@composer check-phpcs"
+            "@composer check-security"
         ],
         "pre-update-cmd": [
             "@composer check-isvalid"
         ],
         "post-update-cmd": [
-            "@composer check-security",
-            "@composer check-phpcs"
+            "@composer check-security"
         ],
         "check-isvalid": [
             "@composer validate --no-check-all --ansi"
