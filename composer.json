@@ -25,24 +25,14 @@
 
     },
     "scripts": {
-        "pre-install-cmd": [
-            "@composer check-isvalid"
-        ],
-        "post-install-cmd": [
-
-            "@composer check-security"
-        ],
-        "pre-update-cmd": [
-            "@composer check-isvalid"
-        ],
-        "post-update-cmd": [
-            "@composer check-security"
-        ],
         "check-isvalid": [
             "@composer validate --no-check-all --ansi"
         ],
         "check-phpcs": [
             "vendor\\bin\\phpcs --standard=PSR2 application/"
+        ],
+        "check-phpcompat": [
+            "vendor\\bin\\phpcs -p . --standard=PHPCompatibility"
         ],
         "check-profile": [
             "@composer show -i",
@@ -55,7 +45,7 @@
         ],
         "check-test": [
             "vendor\\bin\\phpunit --dump-xdebug-filter ../../bin/xdebug-filter.php",
-            "vendor\\bin\\phpunit --prepend bin/xdebug-filter.php -vvv --testdox"
+            "vendor\\bin\\phpunit --prepend bin/xdebug-filter.php -vvv --testdox --colors=always"
         ],
         "fix-cache": [
             "@composer dump-autoload --optimize --classmap-authoritative",
@@ -89,7 +79,7 @@
         "install-production": "Install the standard setup with code efficiently."
     },
     "require": {
-        "php": "7.1.* || 7.2.*",
+        "php": "7.2.* || 7.3.*",
         "codeigniter/framework": "^3.1.0",
         "cweagans/composer-patches": "^1.6",
         "hirak/prestissimo": "^0.3.9"
@@ -101,7 +91,8 @@
         "dereuromark/composer-prefer-lowest": "^0.1.4",
         "kenjis/ci-phpunit-test": "0.17.0",
         "nerones/codeigniter-phpcs": "dev-master",
-        "phpunit/phpunit": "^7",
+        "phpunit/phpunit": "^8",
+        "phpcompatibility/php-compatibility": "^8",
         "roave/security-advisories": "dev-master"
     },
     "autoload": {
@@ -114,7 +105,7 @@
     },
     "config": {
         "platform": {
-            "php": "7.1"
+            "php": "7.2"
         },
         "sort-packages": true,
         "secure-http": true,

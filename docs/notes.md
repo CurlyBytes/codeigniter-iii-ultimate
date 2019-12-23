@@ -14,6 +14,7 @@ composer dump-autoload
 php composer.phar status
 php composer.phar self-update
 
+search about https://packagist.org/packages/phpcompatibility/php-compatibility this package on proper usage
 --
  show                   Shows information about packages.
   status                 Shows a list of locally modified packages, for packages installed from source.
@@ -33,6 +34,18 @@ php composer.phar self-update
 
 search position it job works
 -- if else statement in CI ( azure yaml or travis CI)
+   "phpcs-src": "vendor\\bin\\phpcs",
+    "phpcs-tests": "vendor\\bin\\phpcs --runtime-set testVersion 5.6 tests\\phpunit\\",
+    "phpcs": [
+      "@phpcs-src",
+      "@phpcs-tests"
+    ],
+    "test-unit": "vendor\\bin\\phpunit --testsuite unit",
+    "test-integration": "vendor\\bin\\phpunit --testsuite integration"
+
+
+pattern to create new project on composer composer create-project laravel/laravel --prefer-dist --profile --verbose
+
 ---
 To install phpunit
 - https://phpunit.de/getting-started-with-phpunit.html
