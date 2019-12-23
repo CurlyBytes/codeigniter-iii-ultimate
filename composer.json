@@ -58,7 +58,7 @@
         "install-lowest": "validate-prefer-lowest -m",
         "install-lowest-setup": "composer update --prefer-lowest --prefer-stable --prefer-dist --no-interaction && cp composer.json composer.backup && composer require --dev dereuromark/composer-prefer-lowest && mv composer.backup composer.json",
         "install-production": [
-            "@composer install --no-interaction --prefer-dist --no-dev --optimize-autoloader --apcu-autoloader"
+            "@composer install --no-interaction --prefer-dist --optimize-autoloader --apcu-autoloader"
         ],
 
         "update-package": [
