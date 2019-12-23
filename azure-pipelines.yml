@@ -23,10 +23,13 @@ steps:
   displayName: 'Use PHP version $(phpVersion)'
 
 - script: composer install-production
-  displayName: 'composer install production mode'
+  displayName: 'composer install'
 
-- script: composer check-test
-  displayName: 'Add XDebug for faster code analysis and unit test'
+- script: ./vendor/bin/phpunit --dump-xdebug-filter ../../bin/xdebug-filter.php
+  displayName: 'Add XDebug for faster code analysis'
+
+- script: ./vendor/bin/phpunit --prepend bin/xdebug-filter.php -vvv --testdox --colors=always
+  displayName: 'Run tests with phpunit and generate the code analysis'
 
 - task: ArchiveFiles@2
   inputs:
