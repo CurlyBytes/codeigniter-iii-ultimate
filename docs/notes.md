@@ -14,6 +14,32 @@ composer dump-autoload
 php composer.phar status
 php composer.phar self-update
 
+
+
+major installation or first
+composer create-project laravel/laravel --prefer-dist --profile --verbose
+
+major changes or update
+composer update --dry-run --profile --verbose
+
+
+patch only
+$ composer require monolog/monolog:>1.18.0 -o
+
+stable minor or 1 up higher of the current
+composer require monolog/monolog:~1.18.0 -o
+
+latest stable minor
+composer require monolog/monolog:^1.18.0 -o
+referrence
+https://nomadphp.com/blog/11/Five-Composer-Tips-Every-PHP-Developer-Should-Know
+https://www.droptica.com/blog/10-tricks-work-efficiently-composer-drupal-8/
+
+
+CI should have everyday build per application , and the library should be install specific version
+
+
+
 search about https://packagist.org/packages/phpcompatibility/php-compatibility this package on proper usage
 --
  show                   Shows information about packages.
