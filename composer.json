@@ -79,17 +79,16 @@
         "php": "7.2.* || 7.3.*",
         "codeigniter/framework": "^3.1.0",
         "cweagans/composer-patches": "^1.6",
+        "phpunit/phpunit": "^7",
+        "kenjis/ci-phpunit-test": "0.17.0",
+        "squizlabs/php_codesniffer": "^3.3",
         "hirak/prestissimo": "^0.3.9"
     },
     "require-dev": {
-        "squizlabs/php_codesniffer": "^3.3",
         "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
         "phpmd/phpmd": "^2.6",
         "dereuromark/composer-prefer-lowest": "^0.1.4",
-        "kenjis/ci-phpunit-test": "0.17.0",
         "nerones/codeigniter-phpcs": "dev-master",
-        "phpunit/phpunit": "^7",
-        "phpcompatibility/php-compatibility": "^8",
         "roave/security-advisories": "dev-master"
     },
     "autoload": {
