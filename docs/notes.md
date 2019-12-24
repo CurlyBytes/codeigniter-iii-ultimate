@@ -57,7 +57,14 @@ search about https://packagist.org/packages/phpcompatibility/php-compatibility t
   selfupdate             Updates composer.phar to the latest version.
     about                  Shows the short information about Composer.
   archive                Creates an archive of this composer package.
-
+- will add declare(strict_types=1); in index.php root file
+- add validation from google cache
+- add validatio from google validator
+- add html validator
+- add css validator
+- add google mobile friendly
+- add gtmetrix
+- add tool.pingdom.com
 search position it job works
 -- if else statement in CI ( azure yaml or travis CI)
    "phpcs-src": "vendor\\bin\\phpcs",
