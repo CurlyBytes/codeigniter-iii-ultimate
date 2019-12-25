@@ -29,7 +29,7 @@
             "@composer validate --no-check-all --ansi"
         ],
         "check-phpcs": [
-            "vendor\\bin\\phpcs --standard=PSR2 application/"
+            "vendor\\bin\\phpcs --report-full --standard=PSR2 application/"
         ],
         "check-profile": [
             "@composer show -i",
@@ -101,7 +101,7 @@
     },
     "config": {
         "platform": {
-            "php": "7.2"
+            "php": "7.3"
         },
         "sort-packages": true,
         "secure-http": true,

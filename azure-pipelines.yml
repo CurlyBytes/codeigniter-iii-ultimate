@@ -22,7 +22,10 @@ steps:
     php -version
   displayName: 'Use PHP version $(phpVersion)'
 
-- script: composer install-production
+- script: |
+    composer self-update
+    composer fix-cache
+    composer install-production
   displayName: 'composer install'
 
 - script: ./vendor/bin/phpunit --dump-xdebug-filter ../../bin/xdebug-filter.php
@@ -31,9 +34,15 @@ steps:
 - script: ./vendor/bin/phpunit --prepend bin/xdebug-filter.php -vvv --testdox --colors=always
   displayName: 'Run tests with phpunit and generate the code analysis'
 
+- task: PublishTestResults@2
+  inputs:
+    testRunner: 'JUnit'
+    testResultsFiles: '**/bin/build/logs/junit.xml'
+
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(system.defaultWorkingDirectory)'
     includeRootFolder: false
+
 - task: PublishBuildArtifacts@1
 
