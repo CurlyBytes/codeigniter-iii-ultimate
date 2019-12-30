@@ -2046,16 +2046,16 @@
         },
         {
             "name": "phpmd/phpmd",
-            "version": "2.8.0",
+            "version": "2.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpmd/phpmd.git",
-                "reference": "9b9fbb3b9491957540cb313a459c09b30ae22450"
+                "reference": "5664b95d484797582f5af9536238deb9ecde58a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpmd/phpmd/zipball/9b9fbb3b9491957540cb313a459c09b30ae22450",
-                "reference": "9b9fbb3b9491957540cb313a459c09b30ae22450",
+                "url": "https://api.github.com/repos/phpmd/phpmd/zipball/5664b95d484797582f5af9536238deb9ecde58a1",
+                "reference": "5664b95d484797582f5af9536238deb9ecde58a1",
                 "shasum": ""
             },
             "require": {
@@ -2065,6 +2065,7 @@
                 "php": ">=5.3.9"
             },
             "require-dev": {
+                "easy-doc/easy-doc": "0.0.0 || ^1.3.2",
                 "gregwar/rst": "^1.0",
                 "mikey179/vfsstream": "^1.6.4",
                 "phpunit/phpunit": "^4.8.36 || ^5.7.27",
@@ -2111,7 +2112,7 @@
                 "phpmd",
                 "pmd"
             ],
-            "time": "2019-12-16T11:15:39+00:00"
+            "time": "2019-12-27T11:09:06+00:00"
         },
         {
             "name": "psr/container",
@@ -2215,12 +2216,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "181dd66fd666ed397991ded7b725fe90a8a00413"
+                "reference": "44a677c8e06241a66409ae6e4820dc166fc09ab2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/181dd66fd666ed397991ded7b725fe90a8a00413",
-                "reference": "181dd66fd666ed397991ded7b725fe90a8a00413",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/44a677c8e06241a66409ae6e4820dc166fc09ab2",
+                "reference": "44a677c8e06241a66409ae6e4820dc166fc09ab2",
                 "shasum": ""
             },
             "conflict": {
@@ -2311,7 +2312,7 @@
                 "pusher/pusher-php-server": "<2.2.1",
                 "robrichards/xmlseclibs": ">=1,<3.0.4",
                 "sabre/dav": ">=1.6,<1.6.99|>=1.7,<1.7.11|>=1.8,<1.8.9",
-                "scheb/two-factor-bundle": "<3.26|>=4,<4.11",
+                "scheb/two-factor-bundle": ">=0,<3.26|>=4,<4.11",
                 "sensiolabs/connect": "<4.2.3",
                 "serluck/phpwhois": "<=4.2.6",
                 "shopware/shopware": "<5.3.7",
@@ -2426,7 +2427,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2019-12-21T14:43:42+00:00"
+            "time": "2019-12-26T14:16:40+00:00"
         },
         {
             "name": "symfony/config",
