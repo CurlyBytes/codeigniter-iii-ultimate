@@ -85,7 +85,7 @@
         "hirak/prestissimo": "^0.3.9"
     },
     "require-dev": {
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.6.0",
         "phpmd/phpmd": "^2.6",
         "dereuromark/composer-prefer-lowest": "^0.1.4",
         "nerones/codeigniter-phpcs": "dev-master",
